@@ -1,15 +1,22 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<?php
+include 'variables.php';
+include 'funcionesProducto.php';//Aquí ya está incluido Producto.php
+session_start();
+$usuario=$_SESSION['usuario'];
+$productos=$_SESSION['productos'];
+$lista_productos=devolverProductos();
+$texto_tabla=pintarTabla($lista_productos);
+
+?>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-       Estás en comprar
-    </body>
+<head>
+
+</head>
+<body>
+    <h1>Bienevnido, <?php echo $usuario?>.Hay <?php echo count($productos);?> productos.   </h1>
+    <a href="vercesta.php">Ver cesta</a>
+<?php 
+echo $texto_tabla;
+?>
+</body>
 </html>

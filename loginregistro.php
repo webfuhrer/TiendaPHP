@@ -15,6 +15,8 @@ if ($accion=='login')
     {
         session_start();
         $_SESSION['usuario']=$usuario;
+        $productos=array();
+        $_SESSION['productos']=$productos;
         header("Location: comprar.php");
     }
     else {
