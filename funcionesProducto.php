@@ -156,7 +156,7 @@ function pintarTabla($lista_productos)
 
 function pintarTablaCesta($lista_productos)
 {
-    echo("Productos:".$lista_productos);
+    
 	$aux="<table>";
 	for ($i=0; $i<count($lista_productos); $i++)
 	{
